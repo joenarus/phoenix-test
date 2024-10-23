@@ -2,7 +2,6 @@ defmodule LiveViewStudioWeb.LightForm do
   use LiveViewStudioWeb, :live_view
 
   def mount(_params, _session, socket) do
-    {:ok, assign(socket, :brightness, 10)}
     {:ok, assign(socket, :people, LiveViewStudio.Person |> LiveViewStudio.Repo.all)}
   end
 
